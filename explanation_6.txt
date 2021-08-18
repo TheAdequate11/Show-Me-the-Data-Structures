@@ -1,0 +1,18 @@
+The union function uses a set. Our desired output is a linked list containing
+only the values which can be found in either list; a set is ideal in this situation
+since we only need to traverse through each input linked list and append it to the set.
+Since a set only contains unique values, it will ensure that duplicate values in either
+list are omitted. The time complexity of traversing through the linked lists are O(n).
+Once the set is finalized, we traverse through the set and append each item to a linked list;
+once again, the time complexity of this is O(n). The overall time complexity of the union Function
+is O(n) since there are no nested loops and each data structure is looped independently of the others.
+The space complexity of this function is also O(n) since the values in the produced linked list
+are restricted to uniquely those found in the inputs (which has space complexity O(n))
+
+The intersection function utilizes a hash map. The first process is to loop through any one
+of the input linked lists and append each of these to the hash map; this has time complexity O(n)
+and space complexity O(n). Then, the other linked list is traversed. For each value, if it exists
+in the hash map, it is appended to a new linked list (note that the time complexity for using 'in'
+on a hash map is O(1)). Finally, the new linked list is returned. A hash map reduces the look up
+time of similar values to constant time, and therefore the time complexity is O(n) instead of
+O(n^2).

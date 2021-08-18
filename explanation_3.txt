@@ -1,0 +1,14 @@
+The solution to problem 3 contains a variety of data structures: binary trees, hash maps, and arrays.
+Binary trees are used for the min-heap and the Huffman tree. The min-heap is represented by an array
+since it is possible to mathematically find a nodes parent/child through a simple equation. The min-heap
+is then used to act like a priority queue where the smallest item in the tree is always dequeued first. A
+min-heap provides the most efficient sorting of elements with a time complexity of O(log(n)) to fix any
+inconsistencies within the heap. Inserting and removing an item from the heap also have O(log(n)) since
+these function require the heap to be resorted. The worst-case time complexity of the min-heap is O(n): this
+is due to the possibility of every letter being unique.
+
+The process of Huffman encoding and decoding has an overall time complexity of O(nlog(n)). The reason
+being that the entire input string must be iterated through to decode each letter: this has complexity O(n).
+To find the corresponding letter for a code, a branch in the Huffman tree must be traversed: this has complexity
+O(log(n)). Putting the two together gives complexity O(nlog(n)). Thus, the overall time complexity of the algorithm
+is O(nlog(n)) and the space complexity is O(n)

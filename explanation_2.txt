@@ -1,0 +1,11 @@
+A file directory resembles a tree data structure, and it is useful to imagine
+it as one to proceed with the algorithm. The aim is to find all files with a
+specific prefix; since the files are not sorted, it is necessary to search every
+directory: meaning that time complexity for this algorithm is at minimum O(n) -
+and with a recursive function the time complexity is O(n). A recursive function
+is best suited for this problem because it optimizes space complexity. A recursive
+function permits a depth-first search: all children in a branch are visited before
+proceeding to the next branch. Each recursion pushes an item onto a call stack,
+and the number of items in this call stack is equivalent to the height of the tree
+for the currently visited node. Therefore, the space complexity for a recursive
+function is O(log(n)).

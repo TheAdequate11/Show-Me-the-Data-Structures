@@ -1,0 +1,12 @@
+The solution to problem 1 uses two data structures simultaneously: a hash map and a queue.
+The hash map allows the 'get(key)' function to look up keys in constant time (O(1)). Similarly,
+the 'set(key,value)' function adds a value to the cache in constant time. Since this a LRU cache,
+there must be some way of tracking the least recently used item; naturally, a queue can be used
+to do so. The head of a queue is the oldest element and is the first to be removed; thus, if every
+item is called only once then it will naturally remove the least recently used item. However, every
+item will not be called only once. Therefore, there must be a function that moves a node from
+its position in the queue to the tail; this was done in the solution by simultaneously using the
+hash map. In the end, all functions within the queue itself have a time complexity of O(1): the functions
+enqueue(), dequeue(), and update() do not iterate through any other nodes in the queue. Therefore,
+the overall time complexity of the algorithm is O(1). The space complexity is O(n) since the cache
+and the queue are restricted to the size of the capacity input.

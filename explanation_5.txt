@@ -1,0 +1,5 @@
+The data structured used was a linked list since it is similar to the idea of a blockchain.
+Each block contains information about the transaction, the hash, timestamp, the previous block's
+hash, and the next block in the linked list. The time complexity of implementing a new block
+is O(1) since it is simply appended to the tail of the linked list. The space complexity
+is O(n) since the linked list only contains the number of blocks input by the user.

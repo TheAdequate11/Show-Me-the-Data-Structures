@@ -1,0 +1,7 @@
+The 'Group' object resembles a tree; and look ups in unsorted trees are limited
+to linear time complexity O(n): in the worst case scenario all items must be
+visited. Therefore, the time complexity for this algorithm is O(n). The
+lookup function 'is_user_in_group' is recursive as I found this was the
+simplest solution to the problem. The space complexity of the algorithm is
+O(log(n)) since the recursive function performs a depth-first search and the call
+stack will only contain a branch worth of items in memory at one time.
