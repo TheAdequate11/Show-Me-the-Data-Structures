@@ -196,3 +196,28 @@ and then each proceeding block has previous hash of the previous block in the li
 |  Hash: hash_value             | <---
 |  Prev_hash: Prev_hash_value   |
 '''
+"""
+-------------------------------------------------------------------------------
+                            Test Case #4
+-------------------------------------------------------------------------------
+"""
+print("Test Run #4:")
+print()
+
+block_chain = Linked_List()
+
+block_chain.print_block()
+
+block_chain.append('Car purchased')
+
+block_chain.print_block()
+print('_____________________________________________________________________')
+
+
+'''
+Block chain is empty
+|  Timestamp: (time)            |
+|  Data: Car purchased          |
+|  Hash: hash_value             | <---
+|  Prev_hash: Prev_hash_value   |
+'''

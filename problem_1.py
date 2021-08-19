@@ -317,3 +317,66 @@ Expected Output:
 -1
 -1
 '''
+
+"""
+-------------------------------------------------------------------------------
+                            Test Case #4
+-------------------------------------------------------------------------------
+"""
+print('_______________________________________________________________________')
+print("Test Run #4:")
+print()
+
+test_cache_4 = LRU_Cache(-1)
+
+test_cache_4.set(2, 3.1234)
+
+test_cache_4.get(2)
+
+test_cache_4.set(3.0,3)
+
+test_cache_4.get(3.0)
+
+test_cache_4.set(2, 3.1234)
+
+test_cache_4.get(2)
+
+test_cache_4.set(3.0,3)
+
+test_cache_4.get(3.0)
+
+'''
+Expected Output:
+-1
+-1
+-1
+-1
+'''
+"""
+-------------------------------------------------------------------------------
+                            Test Case #5
+-------------------------------------------------------------------------------
+"""
+print('_______________________________________________________________________')
+print("Test Run #5:")
+print()
+
+test_cache_5 = LRU_Cache(70)
+
+for i,j in enumerate(range(70)):
+    test_cache_5.set(i,j)
+
+
+for i in range(70):
+    test_cache_5.get(i)
+
+test_cache_5.get(0)
+test_cache_5.set(70,70)
+test_cache_5.get(1)
+
+'''
+Expected Output:
+Values from 0 to 69
+0
+-1
+'''

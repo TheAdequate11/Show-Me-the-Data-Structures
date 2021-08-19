@@ -7,5 +7,5 @@ is best suited for this problem because it optimizes space complexity. A recursi
 function permits a depth-first search: all children in a branch are visited before
 proceeding to the next branch. Each recursion pushes an item onto a call stack,
 and the number of items in this call stack is equivalent to the height of the tree
-for the currently visited node. Therefore, the space complexity for a recursive
-function is O(log(n)).
+for the currently visited node. Therefore, the auxiliary space complexity for a recursive
+function is O(log(n)). However, the overall space complexity of the algorithm is O(n).
