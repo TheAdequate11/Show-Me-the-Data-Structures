@@ -221,3 +221,33 @@ Block chain is empty
 |  Hash: hash_value             | <---
 |  Prev_hash: Prev_hash_value   |
 '''
+
+"""
+-------------------------------------------------------------------------------
+                            Test Case #5
+-------------------------------------------------------------------------------
+"""
+print("Test Run #5:")
+print()
+
+block_chain = Linked_List()
+block_chain.append('One')
+block_chain.append('Two')
+block_chain.append('Three')
+node = block_chain.head
+while node:
+    print(node.timestamp)
+    node = node.get_next()
+
+block_chain.print_block()
+print('_____________________________________________________________________')
+
+
+'''
+Same Time stamp 3x
+Then 3 blocks with the same time stamp but unique hashes
+|  Timestamp: (time)            |
+|  Data: Car purchased          |
+|  Hash: hash_value             | <---
+|  Prev_hash: Prev_hash_value   |
+'''
